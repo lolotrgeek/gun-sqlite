@@ -20,7 +20,8 @@ const adapter = new KeyValAdapter({
         sqlOpt.onReady = opt.onReady || (() => { });
         this.db = new sqlite3.Database(sqlOpt.database_name || "GunDB.db");
         this.tableName = sqlOpt.table || "GunTable";
-
+        sqlOpt.onOpen = (() => {})
+        sqlOpt.onError = ((err) => {})
         // Prepare the DB for writes with table and indexes
         this.db.run(`CREATE TABLE IF NOT EXISTS ${this.tableName} (keyField PRIMARY KEY, key, field, val, rel, state, type)`, [], (err) => {
             err ? sqlOpt.onError(err) : sqlOpt.onReady.call(null)
