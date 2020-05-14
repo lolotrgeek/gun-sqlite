@@ -1,5 +1,5 @@
 const KeyValAdapter = require('./key-val-adapter');
-const sqlite3 = reuire('sqlite3').verbose();
+const sqlite3 = require('sqlite3').verbose();
 const coerce = require('./coerce');
 const processRow = require('./process-row');
 
