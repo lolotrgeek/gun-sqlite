@@ -1,6 +1,6 @@
 {
     "name": "gun-sqlite",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "lolotrgeek",
     "main": "index.js",
     "description": "A Gun <> SQLite Adapter for NodeJs",
